@@ -22,9 +22,9 @@
 - (IBAction)ButterToShortcut:(id)sender {
     NSLog(@"libbuttermilk ready...");
     const char *input = [[self.ButtermilkText text] UTF8String];
-    char *output = buttermilk(input);
-    NSLog(@"%s",output);
+    const char *output = buttermilk(1, input);
     NSString *output2 = [NSString stringWithFormat:@"%s", output];
+    [self.DisplayShortcutOutputDemoText setText:output2];
     if ([@"test" isEqualToString:[self.ButtermilkText text]])
     {
         NSLog(@"Success");

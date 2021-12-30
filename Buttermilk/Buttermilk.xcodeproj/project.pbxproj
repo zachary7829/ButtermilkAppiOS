@@ -31,6 +31,7 @@
 		B0BB9072277A7D6B00E75B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0BB9073277A7D6B00E75B6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0BB907A277A98E700E75B6D /* libbuttermilk */ = {isa = PBXFileReference; lastKnownFileType = folder; name = libbuttermilk; path = ../../../../Downloads/libbuttermilk; sourceTree = "<group>"; };
+		B0BB907E277BEAB900E75B6D /* Buttermilk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Buttermilk.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		B0BB9060277A7D6900E75B6D /* Buttermilk */ = {
 			isa = PBXGroup;
 			children = (
+				B0BB907E277BEAB900E75B6D /* Buttermilk.entitlements */,
 				B0BB9061277A7D6900E75B6D /* AppDelegate.h */,
 				B0BB9062277A7D6900E75B6D /* AppDelegate.m */,
 				B0BB9064277A7D6900E75B6D /* SceneDelegate.h */,
@@ -296,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Buttermilk/Buttermilk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RR5WP5NG77;
@@ -314,6 +317,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachary7829.Buttermilk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -324,6 +328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Buttermilk/Buttermilk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RR5WP5NG77;
@@ -342,6 +347,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachary7829.Buttermilk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

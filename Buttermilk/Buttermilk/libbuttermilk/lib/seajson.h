@@ -16,13 +16,13 @@ char * getstring(char *funckey, char *dict) {
     // Access each char in the string
     test[i] = dict[i];
   }
-  int testt3, testt4, beginkey, endkey = 0;
+  int testt3, testt4 = 0;
   int c = 0;
   char sub[sizeof test + 1];
   char *returnkey;
   int ignore = 0;
   int instring = 0;
-  int keysegmentlength = sizeof funckey1;
+  unsigned long beginkey, endkey, keysegmentlength = sizeof funckey1;
   for(int i = 0; i < sizeof test; ++i) {
     if (test[i] == '\"'){
       //is "
