@@ -1,4 +1,4 @@
-//Zachary Keffaber / zachary7829, 2021/10/12, SeaJson 
+//Zachary Keffaber / zachary7829, 2021/10/12, SeaJson
 
 //NOTE: This code is *really* bad, please use something else
 
@@ -6,6 +6,10 @@
 #include <string.h>
 
 char * getstring(char *funckey, char *dict) {
+  printf("char getstring reached\n");
+    if (funckey == NULL){ //Prevent from crashing, note that this doesn't actually fix anything
+        return NULL;
+    }
   char funckey1[strlen(funckey)];
   for (size_t i = 0; i < strlen(funckey); i++) {
     // Access each char in the string
@@ -16,13 +20,13 @@ char * getstring(char *funckey, char *dict) {
     // Access each char in the string
     test[i] = dict[i];
   }
-  int testt3, testt4 = 0;
+  int testt3, testt4, endkey = 0;
   int c = 0;
   char sub[sizeof test + 1];
   char *returnkey;
   int ignore = 0;
   int instring = 0;
-  unsigned long beginkey, endkey, keysegmentlength = sizeof funckey1;
+  unsigned long beginkey, keysegmentlength = sizeof funckey1;
   for(int i = 0; i < sizeof test; ++i) {
     if (test[i] == '\"'){
       //is "
