@@ -78,7 +78,7 @@ char *buttermilk(int mode, char *text) {
     char params[charindex];
     memcpy(params,&nocommentline[charindex3],charindex);
     params[charindex] = '\0';
-    if (!(strchr(nocommentline, '.'))) {
+    if (!(strchr(params, '.'))) {
       actionid = getstring(params,butternames);
     } else {
       actionid = params;

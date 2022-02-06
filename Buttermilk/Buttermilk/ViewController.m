@@ -16,6 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.myTableView.dataSource = self;
+    self.myTableView.delegate = self;
+    
+    /*
+    UIViewController *viewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"Identifier"];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [self.navigationController pushViewController:navi animated:YES];
+     */
     // Do any additional setup after loading the view.
 }
 - (IBAction)ShortcutToButter:(id)sender {
@@ -33,5 +41,14 @@
     [self.ButtermilkText setText:output2];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1; //number of rows in table view
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.textLabel.text = @"Demo.butter";
+    return cell;
+}
 
 @end
